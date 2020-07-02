@@ -104,7 +104,7 @@
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson</artifactId>
-            <version>3.9.0</version>
+            <version>3.13.2</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
