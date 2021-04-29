@@ -1,0 +1,81 @@
+version: 2
+registries:
+  git-github-com:
+    type: git
+    url: https://github.com
+    username: saminfante
+    password: "${{secrets.GIT_GITHUB_COM_PASSWORD}}"
+
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "13:49"
+    timezone: US/Central
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: org.redisson:redisson
+    versions:
+    - 3.15.0
+    - 3.15.1
+    - 3.15.2
+    - 3.15.3
+  - dependency-name: com.alibaba.nacos:nacos-client
+    versions:
+    - 1.4.1
+    - 2.0.0
+  - dependency-name: org.springframework:spring-context
+    versions:
+    - 5.3.3
+    - 5.3.4
+    - 5.3.5
+  - dependency-name: org.springframework:spring-jdbc
+    versions:
+    - 5.3.3
+    - 5.3.4
+    - 5.3.5
+  - dependency-name: org.springframework:spring-context-support
+    versions:
+    - 5.3.3
+    - 5.3.4
+    - 5.3.5
+  - dependency-name: redis.clients:jedis
+    versions:
+    - 3.5.1
+    - 3.5.2
+  - dependency-name: org.mockito:mockito-core
+    versions:
+    - 3.7.7
+    - 3.8.0
+  - dependency-name: org.apache.dubbo:dubbo
+    versions:
+    - 2.7.8
+    - 2.7.9
+  - dependency-name: com.alibaba:druid
+    versions:
+    - 1.2.4
+    - 1.2.5
+  - dependency-name: com.netflix.eureka:eureka-client
+    versions:
+    - 1.10.12
+  - dependency-name: com.alibaba:fastjson
+    versions:
+    - 1.2.75
+  - dependency-name: org.codehaus.mojo:flatten-maven-plugin
+    versions:
+    - 1.2.5
+  - dependency-name: com.ctrip.framework.apollo:apollo-client
+    versions:
+    - 1.7.0
+  - dependency-name: org.testng:testng
+    versions:
+    - 7.3.0
+  - dependency-name: kr.motd.maven:os-maven-plugin
+    versions:
+    - 1.6.2
+  - dependency-name: org.apache.zookeeper:zookeeper
+    versions:
+    - 3.5.6
+  registries:
+  - git-github-com
